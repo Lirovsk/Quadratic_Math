@@ -1,5 +1,6 @@
 #include <iostream>
 #include <math.h>
+#include <sqrt_test.cpp>
 
 using namespace std;
 
@@ -34,7 +35,7 @@ int VerificaDelta ( int valorD)
 }
 
 // Função principal
-int main()
+int rootDone()
 {
     // declaração das variáveis
     int numero;
