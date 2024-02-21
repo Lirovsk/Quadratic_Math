@@ -35,14 +35,38 @@ int VerificaDelta ( int valorD)
 }
 
 // Função principal
-int rootDone()
+int main()
 {
+    
     // declaração das variáveis
     int numero;
     int valorRetorno;
+    int valorFRaiz = 0;
+    int valorDRaiz = 0;
     cout << "insira um numero: ";
     cin >> numero;
     valorRetorno = VerificaDelta(numero);
+    switch (valorRetorno)
+    { 
+        case 1:
+            cout << "o núemro do delta e negativo. ";
+            cout << "Consequentemente, essa funcao não tem raizes reais";
+        break;
+    
+        case 2:
+            cout << "o núemro do delta e um quadrado perfeito. ";
+            cout << "Consequentemente, essa funcao tem duas raizes reais";
+            valorFRaiz=sqrt(numero);
+            cout << "As raizes sao: + " << valorFRaiz << " e -" << valorFRaiz;
+        break;
+
+        case 3:
+            cout << "o núemro do delta e um núemro positivo que não e um quadrado perfeito. ";
+            cout << "Consequentemente, essa funcao tem duas raizes reais";
+            rootDone(numero, valorDRaiz, valorFRaiz);
+            cout << "As raizes sao: + " << valorFRaiz << "*/" << valorDRaiz << " e -" << valorFRaiz << "*/" << valorDRaiz;
+        break;
+    }
     cout << valorRetorno;
     return 0;
 }
