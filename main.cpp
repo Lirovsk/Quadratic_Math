@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-#include <sqrt_test.cpp>
+#include <C:\Users\Arauj\OneDrive\Documentos\C++\sqrt_test.cpp>
 
 using namespace std;
 
@@ -41,32 +41,31 @@ int main()
     // declaração das variáveis
     int numero;
     int valorRetorno;
-    int valorFRaiz = 0;
-    int valorDRaiz = 0;
+    int valorRaiz[2]={0,0};
     cout << "insira um numero: ";
     cin >> numero;
     valorRetorno = VerificaDelta(numero);
     switch (valorRetorno)
     { 
         case 1:
-            cout << "o núemro do delta e negativo. ";
+            cout << "o numero do delta e negativo. ";
             cout << "Consequentemente, essa funcao não tem raizes reais";
         break;
     
         case 2:
-            cout << "o núemro do delta e um quadrado perfeito. ";
-            cout << "Consequentemente, essa funcao tem duas raizes reais";
-            valorFRaiz=sqrt(numero);
-            cout << "As raizes sao: + " << valorFRaiz << " e -" << valorFRaiz;
+            cout << "o numero do delta e um quadrado perfeito. ";
+            cout << "Consequentemente, essa funcao tem duas raizes reais\n";
+            valorRaiz[0]=sqrt(numero);
+            cout << "As raizes sao: + " << valorRaiz[0] << " e -" << valorRaiz[0];
         break;
 
         case 3:
-            cout << "o núemro do delta e um núemro positivo que não e um quadrado perfeito. ";
-            cout << "Consequentemente, essa funcao tem duas raizes reais";
-            rootDone(numero, valorDRaiz, valorFRaiz);
-            cout << "As raizes sao: + " << valorFRaiz << "*/" << valorDRaiz << " e -" << valorFRaiz << "*/" << valorDRaiz;
+            cout << "O numero e positivo e nao perfeito. ";
+            cout << "Consequentemente, essa funcao tem duas raizes reais\n";
+            rootDone(numero, valorRaiz);
+            cout << "As raizes sao: + " << valorRaiz[0] << "*/" << valorRaiz[1] << " e -" << valorRaiz[0] << "*/" << valorRaiz[1];
         break;
     }
-    cout << valorRetorno;
+    
     return 0;
 }
