@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void rootDone(int n, int VDraiz[2]){
+static void rootDone(int n, int VDraiz[2]){
     
     int fatores[25]={2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,87,97};
     int V0Expoente[25]={0};
