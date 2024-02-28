@@ -23,6 +23,7 @@ void rootDone(int n, int VDraiz[2]){
             V0Expoente[i]++;
         }
         i++;
+        // Condição caso o número continue mairo que 1 mesemo que acabme os fatores primos
         if (i==24 && n>1)
         {
             numero_restante=n;
@@ -35,12 +36,15 @@ void rootDone(int n, int VDraiz[2]){
         {
             if (V0Expoente[j]%2==0)
             {
+                //linha respponsável por dividir por dois o valor de um expoente por dois, realizando assim o calculo da raiz
                 auxA=auxA*(pow(fatores[j],(V0Expoente[j]/2)));
             
             }else{
                 if(V0Expoente[j]!=1)
                 {
+                    //para o caso de um expoente impar, o valor é subatraido uma unnidade e depois dividido por dois
                     auxA=auxA*(pow(fatores[j],((V0Expoente[j]-1)/2)));
+                    //o núnmero quresta é colocado no interio da raiz
                     auxB=auxB*fatores[j];
                 }else {
                     auxB=auxB*fatores[j];

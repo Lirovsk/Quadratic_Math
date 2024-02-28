@@ -21,6 +21,7 @@ int VerificaDelta ( int valorD)
         return 1;
 
     }
+    // Análise do segundo caso
     while (valorD>N)
     {
         N=N+NAux;
